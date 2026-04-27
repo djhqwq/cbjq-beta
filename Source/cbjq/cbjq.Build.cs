@@ -8,7 +8,20 @@ public class cbjq : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+		PublicIncludePaths.AddRange(new string[] {
+			ModuleDirectory + "/Public"
+		});
+
+		/*PublicIncludePaths.AddRange(new string[]
+		{
+			"cbjq/Public"
+		});*/
+		
+		PublicDependencyModuleNames.AddRange(new string[]
+		{
+			"Core", "CoreUObject", "Engine", "InputCore",
+			"GameplayAbilities", "GameplayTasks", "GameplayTags", "GameplayDebugger"
+		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
